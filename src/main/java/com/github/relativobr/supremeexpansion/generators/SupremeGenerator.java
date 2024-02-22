@@ -66,6 +66,7 @@ public class SupremeGenerator {
             SupremeComponents.CARRIAGE_MACHINE
       };
 
+  //IGNIS GENERATOR
   public static final SlimefunItemStack IGNIS_GENERATOR =
       new SlimefunItemStack(
           "IGNIS_GENERATOR",
@@ -81,7 +82,7 @@ public class SupremeGenerator {
   public static final ItemStack[] MACHINE_IGNIS_GENERATOR =
       new ItemStack[] {
         SupremeComponents.AURUM_PLATE, SupremeCetrus.CETRUS_IGNIS, SupremeComponents.AURUM_PLATE,
-        SupremeComponents.INDUCTOR_MACHINE, SlimefunItems.COAL_GENERATOR_2,
+        SupremeComponents.INDUCTOR_MACHINE, new SlimefunItemStack(SlimefunItems.COAL_GENERATOR_2, 16),
             SupremeComponents.INDUCTOR_MACHINE,
         SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.STAFF_FIRE,
             SupremeComponents.CONVEYANCE_MACHINE
@@ -109,6 +110,7 @@ public class SupremeGenerator {
             SupremeComponents.CARRIAGE_MACHINE
       };
 
+  // VENTUS GENERATOR
   public static final SlimefunItemStack VENTUS_GENERATOR =
       new SlimefunItemStack(
           "VENTUS_GENERATOR",
@@ -125,7 +127,7 @@ public class SupremeGenerator {
       new ItemStack[] {
         SupremeComponents.IRIDIUM_PLATE, SupremeCetrus.CETRUS_VENTUS,
             SupremeComponents.IRIDIUM_PLATE,
-        SupremeComponents.INDUCTOR_MACHINE, SlimefunItems.BIO_REACTOR,
+        SupremeComponents.INDUCTOR_MACHINE, new SlimefunItemStack(SlimefunItems.BIO_REACTOR, 16),
             SupremeComponents.INDUCTOR_MACHINE,
         SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.STAFF_WIND,
             SupremeComponents.CONVEYANCE_MACHINE
@@ -142,15 +144,7 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(BASIC_AQUA_BUFFER),
           UtilEnergy.energyPowerPerSecond(BASIC_AQUA_ENERGY));
-  public static final ItemStack[] MACHINE_AQUA_GENERATOR =
-      new ItemStack[] {
-        SupremeComponents.MANGANESE_PLATE, SupremeCetrus.CETRUS_AQUA,
-            SupremeComponents.MANGANESE_PLATE,
-        SupremeComponents.INDUCTOR_MACHINE, BASIC_AQUA_GENERATOR,
-            SupremeComponents.INDUCTOR_MACHINE,
-        SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.STAFF_WATER,
-            SupremeComponents.CONVEYANCE_MACHINE
-      };
+
   public static final ItemStack[] MACHINE_BASIC_AQUA_GENERATOR =
       new ItemStack[] {
         SupremeComponents.ALLOY_MANGANESE, SupremeCoreAlloy.RESOURCE_CORE_DIAMOND,
@@ -160,6 +154,8 @@ public class SupremeGenerator {
         SupremeComponents.CARRIAGE_MACHINE, SlimefunItems.STAFF_WATER,
             SupremeComponents.CARRIAGE_MACHINE
       };
+
+  // AQUA GENERATOR
   public static final SlimefunItemStack AQUA_GENERATOR =
       new SlimefunItemStack(
           "AQUA_GENERATOR",
@@ -171,13 +167,19 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(AQUA_BUFFER),
           UtilEnergy.energyPowerPerSecond(AQUA_ENERGY));
-  public static final ItemStack[] MACHINE_THORNIUM_GENERATOR =
-      new ItemStack[] {
-        SupremeComponents.THORNIUM_ENERGIZED, IGNIS_GENERATOR, SupremeComponents.THORNIUM_ENERGIZED,
-        SupremeComponents.THORNIUM_ENERGIZED, AQUA_GENERATOR, SupremeComponents.THORNIUM_ENERGIZED,
-        SupremeComponents.CRYSTALLIZER_MACHINE, VENTUS_GENERATOR,
-            SupremeComponents.CRYSTALLIZER_MACHINE
-      };
+
+  public static final ItemStack[] MACHINE_AQUA_GENERATOR =
+          new ItemStack[] {
+                  SupremeComponents.MANGANESE_PLATE, SupremeCetrus.CETRUS_AQUA,
+                  SupremeComponents.MANGANESE_PLATE,
+                  SupremeComponents.INDUCTOR_MACHINE, new SlimefunItemStack(SlimefunItems.MAGNESIUM_GENERATOR, 16),
+                  SupremeComponents.INDUCTOR_MACHINE,
+                  SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.STAFF_WATER,
+                  SupremeComponents.CONVEYANCE_MACHINE
+          };
+
+
+
   public static final SlimefunItemStack BASIC_LUX_GENERATOR =
       new SlimefunItemStack(
           "BASIC_LUX_GENERATOR",
@@ -189,34 +191,39 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(BASIC_LUX_BUFFER),
           UtilEnergy.energyPowerPerSecond(BASIC_LUX_ENERGY));
+
+  public static final ItemStack[] MACHINE_BASIC_LUX_GENERATOR =
+          new ItemStack[] {
+                  SupremeComponents.ALLOY_TITANIUM, SupremeCoreAlloy.RESOURCE_CORE_QUARTZ,
+                  SupremeComponents.TITANIUM_PLATE,
+                  SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.SOLAR_GENERATOR_4,
+                  SupremeComponents.INDUCTIVE_MACHINE,
+                  SupremeComponents.CARRIAGE_MACHINE, SlimefunItems.STAFF_STORM,
+                  SupremeComponents.CARRIAGE_MACHINE
+          };
+
+  // LUX GENERATOR
+  public static final SlimefunItemStack LUX_GENERATOR =
+          new SlimefunItemStack(
+                  "LUX_GENERATOR",
+                  Material.WHITE_GLAZED_TERRACOTTA,
+                  "&9Lux Generator",
+                  "&fNeeds to receive sunlight",
+                  "&for moonlight to work",
+                  "",
+                  LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
+                  UtilEnergy.energyBuffer(LUX_BUFFER),
+                  UtilEnergy.energyPowerPerSecond(LUX_ENERGY));
   public static final ItemStack[] MACHINE_LUX_GENERATOR =
       new ItemStack[] {
         SupremeComponents.TITANIUM_PLATE, SupremeCetrus.CETRUS_LUX,
             SupremeComponents.TITANIUM_PLATE,
-        SupremeComponents.INDUCTOR_MACHINE, BASIC_LUX_GENERATOR, SupremeComponents.INDUCTOR_MACHINE,
+        SupremeComponents.INDUCTOR_MACHINE, new SlimefunItemStack(SlimefunItems.SOLAR_GENERATOR_4, 16), SupremeComponents.INDUCTOR_MACHINE,
         SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.STAFF_STORM,
             SupremeComponents.CONVEYANCE_MACHINE
       };
-  public static final ItemStack[] MACHINE_BASIC_LUX_GENERATOR =
-      new ItemStack[] {
-        SupremeComponents.ALLOY_TITANIUM, SupremeCoreAlloy.RESOURCE_CORE_QUARTZ,
-            SupremeComponents.TITANIUM_PLATE,
-        SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.SOLAR_GENERATOR_4,
-            SupremeComponents.INDUCTIVE_MACHINE,
-        SupremeComponents.CARRIAGE_MACHINE, SlimefunItems.STAFF_STORM,
-            SupremeComponents.CARRIAGE_MACHINE
-      };
-  public static final SlimefunItemStack LUX_GENERATOR =
-      new SlimefunItemStack(
-          "LUX_GENERATOR",
-          Material.WHITE_GLAZED_TERRACOTTA,
-          "&9Lux Generator",
-          "&fNeeds to receive sunlight",
-          "&for moonlight to work",
-          "",
-          LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
-          UtilEnergy.energyBuffer(LUX_BUFFER),
-          UtilEnergy.energyPowerPerSecond(LUX_ENERGY));
+
+
   public static final SlimefunItemStack BASIC_LUMIUM_GENERATOR =
       new SlimefunItemStack(
           "BASIC_LUMIUM_GENERATOR",
@@ -228,24 +235,18 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(BASIC_LUMIUM_BUFFER),
           UtilEnergy.energyPowerPerSecond(BASIC_LUMIUM_ENERGY));
-  public static final ItemStack[] MACHINE_LUMIUM_GENERATOR =
-      new ItemStack[] {
-        SupremeComponents.ADAMANTIUM_PLATE, SupremeCetrus.CETRUS_LUMIUM,
-            SupremeComponents.ADAMANTIUM_PLATE,
-        SupremeComponents.INDUCTOR_MACHINE, BASIC_LUMIUM_GENERATOR,
-            SupremeComponents.INDUCTOR_MACHINE,
-        SupremeComponents.CRYSTALLIZER_MACHINE, SlimefunItems.GEO_MINER,
-            SupremeComponents.CRYSTALLIZER_MACHINE
-      };
+
   public static final ItemStack[] MACHINE_BASIC_LUMIUM_GENERATOR =
       new ItemStack[] {
         SupremeComponents.ALLOY_ADAMANTIUM, SupremeCoreAlloy.RESOURCE_CORE_NETHERITE,
             SupremeComponents.ALLOY_ADAMANTIUM,
-        SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.LAVA_GENERATOR_2,
+        SupremeComponents.INDUCTIVE_MACHINE, new SlimefunItemStack(SlimefunItems.LAVA_GENERATOR_2, 16),
             SupremeComponents.INDUCTIVE_MACHINE,
         SupremeComponents.PETRIFIER_MACHINE, SlimefunItems.GEO_MINER,
             SupremeComponents.PETRIFIER_MACHINE
       };
+
+  // LUMIUM GENERATOR
   public static final SlimefunItemStack LUMIUM_GENERATOR =
       new SlimefunItemStack(
           "LUMIUM_GENERATOR",
@@ -257,6 +258,17 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(LUMIUM_BUFFER),
           UtilEnergy.energyPowerPerSecond(LUMIUM_ENERGY));
+  public static final ItemStack[] MACHINE_LUMIUM_GENERATOR =
+          new ItemStack[] {
+                  SupremeComponents.ADAMANTIUM_PLATE, SupremeCetrus.CETRUS_LUMIUM,
+                  SupremeComponents.ADAMANTIUM_PLATE,
+                  SupremeComponents.INDUCTOR_MACHINE, new SlimefunItemStack(SlimefunItems.LAVA_GENERATOR_2, 16),
+                  SupremeComponents.INDUCTOR_MACHINE,
+                  SupremeComponents.CRYSTALLIZER_MACHINE, SlimefunItems.GEO_MINER,
+                  SupremeComponents.CRYSTALLIZER_MACHINE
+          };
+
+  // THORIUM GENERATOR
   public static final SlimefunItemStack THORNIUM_GENERATOR =
       new SlimefunItemStack(
           "THORNIUM_GENERATOR",
@@ -268,13 +280,15 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(THORNIUM_BUFFER),
           UtilEnergy.energyPowerPerSecond(THORNIUM_ENERGY));
-  public static final ItemStack[] MACHINE_SUPREME_GENERATOR =
-      new ItemStack[] {
-        SupremeComponents.SUPREME, LUX_GENERATOR, SupremeComponents.SUPREME,
-        SupremeComponents.SUPREME, LUMIUM_GENERATOR, SupremeComponents.SUPREME,
-        SupremeComponents.CRYSTALLIZER_MACHINE, THORNIUM_GENERATOR,
-            SupremeComponents.CRYSTALLIZER_MACHINE
-      };
+  public static final ItemStack[] MACHINE_THORNIUM_GENERATOR =
+          new ItemStack[] {
+                  SupremeComponents.THORNIUM_ENERGIZED, IGNIS_GENERATOR, SupremeComponents.THORNIUM_ENERGIZED,
+                  SupremeComponents.THORNIUM_ENERGIZED, AQUA_GENERATOR, SupremeComponents.THORNIUM_ENERGIZED,
+                  SupremeComponents.CRYSTALLIZER_MACHINE, VENTUS_GENERATOR,
+                  SupremeComponents.CRYSTALLIZER_MACHINE
+          };
+
+// SUPREME GENERATOR
   public static final SlimefunItemStack SUPREME_GENERATOR =
       new SlimefunItemStack(
           "SUPREME_GENERATOR",
@@ -286,4 +300,11 @@ public class SupremeGenerator {
           LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
           UtilEnergy.energyBuffer(SUPREME_BUFFER),
           UtilEnergy.energyPowerPerSecond(SUPREME_ENERGY));
+  public static final ItemStack[] MACHINE_SUPREME_GENERATOR =
+          new ItemStack[] {
+                  SupremeComponents.SUPREME, LUX_GENERATOR, SupremeComponents.SUPREME,
+                  SupremeComponents.SUPREME, LUMIUM_GENERATOR, SupremeComponents.SUPREME,
+                  SupremeComponents.CRYSTALLIZER_MACHINE, THORNIUM_GENERATOR,
+                  SupremeComponents.CRYSTALLIZER_MACHINE
+          };
 }
